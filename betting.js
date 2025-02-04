@@ -56,10 +56,7 @@ let scores = JSON.parse(localStorage.getItem('scores'))||{
 winOutcome.innerHTML = scores.win;
 loseOutcome.innerHTML = scores.lose;
 
-depositButton.addEventListener('click',()=>{
-    depositAmount();
-    location.reload()
-});
+depositButton.addEventListener('click',depositAmount);
 withdrawButton.addEventListener('click', withdrawAmount);
 spinButton.addEventListener('click',spinRow);
 exitButton.addEventListener('click',quitGame);
