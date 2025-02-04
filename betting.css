@@ -1,0 +1,183 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 100vh;
+}
+.container{
+    background: linear-gradient(180deg, hsl(120, 100%, 60%),hsl(210, 100%, 60%));
+    box-shadow: 8px 8px 15px black;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px 0;
+    text-align: center;
+    width: 300px;
+    position: relative;
+}
+h1{
+    margin: 0;
+    font-size: 2rem;
+}
+.depositWarning{
+    color: red;
+    font-size: 1.5rem;
+}
+.spinning{
+    animation: spinRow 3s ease-in-out;
+}
+.spinResults p{
+    margin: 0 20px;
+    display: inline-block;
+}
+input{
+    padding: 8px;
+    font-size: 1rem;
+    max-width: 148px;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+}
+button{
+    padding: 8px 20px;
+    border: none;
+    font-size: 1rem;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 1.5s ease;
+}
+p{
+    font-size: 1.2rem;
+    margin: 15px 0;
+}
+.amountCrement,.Balance, .spinAmount{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    margin: 5px 0;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+.outcomeShow{
+    margin: 10px 0;
+    height: 50px;
+}
+.outcomeSpin{
+    font-size: 1.5rem;
+}
+.outcomeMessage{
+    margin: 5px 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    color: hsl(0, 0%, 100%);
+    font-weight: bold;
+}
+.depositButton{
+    background-color: hsl(120, 80%, 30%);
+}
+.depositButton:hover{
+    background-color: hsl(120, 80%, 40%);
+}
+.spinButton{
+    background-color: hsl(120, 90%, 30%);
+}
+.spinButton:hover{
+    background-color: hsl(120, 90%, 40%);
+}
+.withdrawButton{
+    background-color: hsl(210, 100%, 40%);
+    margin-bottom: 50px;
+}
+.withdrawButton:hover{
+    background-color: hsl(210, 100%, 50%);
+}
+.withdrawalMessage, .depositMessage, .spinMessage{
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    right: 5%;
+    background-color: hsla(120, 90%, 28%, 0.6);
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.705);
+}
+.exitButton{
+    position: absolute;
+    left: 10px;
+    bottom: 20px;
+    background-color: hsl(265, 100%, 50%);
+}
+.exitButton:hover{
+    background-color: hsl(265, 100%, 70%);
+}
+.startAgain{
+    right: 10px;
+    position: absolute;
+    bottom: 20px;
+    background-color: hsl(227, 93%, 48%);
+}
+.startAgain:hover{
+    background-color: hsl(227, 93%, 68%);
+}
+.exitGame{
+    position: absolute;
+    top: 40%;
+    bottom: 40%;
+    left: 3%;
+    right: 3%;
+    background: linear-gradient(180deg,hsla(91, 94%, 44%, 0.942),hsla(6, 91%, 49%, 0.895));
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 5px;
+}
+.exitGame button{
+    margin: 5px;
+    max-width: 100px;
+    position: absolute;
+    bottom: 20px;
+    background-color: orange;
+    font-weight: bold;
+}
+.yes{
+    left: 5%;
+    color: yellow;
+}
+.no{
+    right: 5%;
+    color: red;
+}
+.refreshGame{
+    position: absolute;
+    top: 40%;
+    bottom: 40%;
+    left: 5%;
+    right: 5%;
+    background-color: rgba(0, 0, 0, 0.87);
+}
+.refreshGame button{
+    background-color: aqua;
+    font-weight: bold;
+    position: absolute;
+    bottom: 5%;
+}
+.continueAction{
+    color: orange;
+    left: 5%;
+}
+.stopAction{
+    color: red;
+    right: 5%;
+}
+
+@keyframes spinRow{
+    from{
+        transform: rotateX(0deg);
+    }
+    to{
+        transform: rotateX(360deg);
+    }
+}

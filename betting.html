@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betting App</title>
+    <link rel="stylesheet" href="betting.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">WELCOME TO SPIN GAME</h1>
+        <p class="symbolsGame"></p>
+        <p>Current Balance: Ksh.<span class="balanceDisplay">0.00</span></p>
+        <div class="spinResults" style="display: none;">
+            <p>Win: <span class="winOutcome">0</span></p>
+            <p>Lose: <span class="loseOutcome">0</span></p>
+        </div>
+        <p>Deposit amount:</p>
+        <input class="depositInput" type="number" placeholder="Enter deposit" min="1"><br>
+        <button class="depositButton">Deposit</button>
+        <p class="depositWarning">Deposit funds to continue</p>
+        <div class="placeBet" style="display: none;">
+            <p class="betPlace">Place your bet amount:</p>
+            <input class="spinInput" type="number" placeholder="Enter spin amount" min="1"><br>
+            <button class="spinButton">Spin</button>
+            <div class="outcomeShow">
+                <div class="outcomeSpin">
+                    <span class="slot"></span>
+                    <span class="slot"></span>
+                    <span class="slot"></span>
+                </div>
+                <div class="outcomeMessage"></div>
+            </div>
+            <p>Withdraw amount:</p>
+            <input class="withdrawInput" type="number" placeholder="Enter withdrawal" min="1"><br>
+            <button class="withdrawButton">Withdraw</button><br>
+            <div class="exitGame" style="display: none;">
+                <p>Are you sure you want to exit?</p>
+                <button type="submit" class="yes">Yes</button>
+                <button class="no">No</button>
+            </div>
+            <div class="refreshGame" style="display: none;">
+                <p>Are you sure you want to start again?</p>
+                <button class="continueAction">Yes</button>
+                <button class="stopAction">No</button>
+            </div>
+            <div>
+                <audio class="spinSound" src="spin sound.mp3"></audio>
+                <audio class="winSound" src="win sound.mp3"></audio>
+                <audio class="jackpotSound" src="jackpot sound.mp3"></audio>
+                <audio class="bonusSound" src="bonus sound.mp3"></audio>
+                <audio class="loseSound" src="lose sound.mp3"></audio>
+                <audio class="notification" src="notification1.mp3"></audio>
+                <audio class="notification1" src="notification2.mp3"></audio>
+            </div>
+            <button class="exitButton">Exit</button>
+            <button class="startAgain">Start Again</button>
+        </div>
+    </div>
+    <script src="betting.js"></script>
+</body>
+</html>
