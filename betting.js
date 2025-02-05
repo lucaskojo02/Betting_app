@@ -36,7 +36,7 @@ else{
 
 if (balance > 0){
     title.innerHTML = "SPIN GAME";
-    symbolsGame.innerHTML = "Symbols: 🍇 🍉 🍊 🔔 ⭐"
+    symbolsGame.style.display = "block"
     spinResults.style.display = "block";
     depositWarning.style.display = "none";
     placeBet.style.display = "block";
@@ -212,7 +212,7 @@ function depositAmount(){
         balance += amount;
         updateBalance();
         title.innerHTML = "SPIN GAME";
-        symbolsGame.innerHTML = "Symbols: 🍇 🍉 🍊 🔔 ⭐"
+        symbolsGame.style.display = "block"
         spinResults.style.display = "block";
         depositWarning.style.display = "none";
         placeBet.style.display = "block";
